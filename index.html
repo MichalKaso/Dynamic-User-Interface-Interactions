@@ -14,8 +14,8 @@
 	<body>
 		<div class="container">
 			<header class="clearfix">
-				<span>Mike's Rides:</span>
-				<h1>Drop-Down Menu</h1>
+				<span>Mike's Rides + Track:</span>
+				<h1>Drop-Down Menu && Image-Slider</h1>
 			</header>	
 			<div class="main">
 				<nav id="cbp-hrmenu" class="cbp-hrmenu">
@@ -60,16 +60,59 @@
 								</div><!-- /cbp-hrsub-inner -->
 							</div><!-- /cbp-hrsub -->
 						</li>
+						<li>
+							<a href="#" class="btn" style="font-size: larger"; >Pick The Track!</a>
+							<div class="cbp-hrsub">
+										<div class="container" id="tracks">	
+											<header class="clearfix">
+												<span>Select Track:</span>
+												<h1>Iconic F1 Tracks</h1>
+											</header>
+											<div id="cbp-fwslider" class="cbp-fwslider">
+												<ul>
+													<li><div><img src="images/italy.jpg" alt="img01"/></div></li>
+													<li><a href="#"><img src="images/brazil.jpg" alt="img02"/></a></li>
+													<li><a href="#"><img src="images/abu-dhabi.jpg" alt="img03"/></a></li>
+												</ul>
+											</div>
+										</div>
+								<!-- /cbp-hrsub-inner -->
+							</div><!-- /cbp-hrsub -->
+						</li>
 					</ul>
 				</nav>
 			</div>
 		</div>
+
+		
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="js/cbpHorizontalMenu.min.js"></script>
 		<script>
 			$(function() {
 				cbpHorizontalMenu.init();
 			});
+		</script>
+		<script src="js/jquery.cbpFWSlider.min.js"></script>
+		<script>
+			$( function() {
+				/*
+				- how to call the plugin:
+				$( selector ).cbpFWSlider( [options] );
+				- options:
+				{
+					// default transition speed (ms)
+					speed : 500,
+					// default transition easing
+					easing : 'ease'
+				}
+				- destroy:
+				$( selector ).cbpFWSlider( 'destroy' );
+				*/
+
+				$( '#cbp-fwslider' ).cbpFWSlider();
+
+			} );
 		</script>
 	</body>
 </html>
